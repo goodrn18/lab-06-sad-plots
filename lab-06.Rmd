@@ -1,5 +1,5 @@
 ---
-title: "Lab 06 - Sad plots"
+title: "Lab 06 - Ugly charts and Simpson's paradox"
 author: "Insert your name here"
 date: "Insert date here"
 output: github_document
