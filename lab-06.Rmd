@@ -28,13 +28,9 @@ staff_long %>%
   labs(title = "Number of Faculty by Type", x = "Year", y = "Number of Faculty Members", color = "Type of Faculty")
 ```
 
-
 ### Exercise 2
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+You could potentially change the colors to emphasize the part-time faculty line (maybe make that line red and the others shades of blue). I also wonder if there is a way to simply make the part-time faculty line bolder/thicker than the other lines.
 
 ### Exercise 3
 
