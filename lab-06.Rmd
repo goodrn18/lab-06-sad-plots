@@ -34,6 +34,27 @@ You could potentially change the colors to emphasize the part-time faculty line 
 
 ### Exercise 3
 
-...
+```{r exercise_3.1}
+fisheries <- read_csv("data/fisheries.csv")
+fisheries <- fisheries %>% filter(capture > 100000, total > 100000, aquaculture > 100000)
+ggplot(data = fisheries,
+       mapping = aes(x = capture, y = country))+
+  geom_point()+
+  labs(title = "Total Capture", subtitle = "by Country", x = "Tons Capture", y = "Country")
+```
+
+```{r exercise_3.2}
+ggplot(data = fisheries,
+       mapping = aes(x = aquaculture, y = country))+
+  geom_point()+
+  labs(title = "Total Aquaculture", subtitle = "by Country", x = "Tons Aquaculture", y = "Country")
+```
+
+```{r exercise_3.3}
+ggplot(data = fisheries,
+       mapping = aes(x = total, y = country))+
+  geom_point()+
+  labs(title = "Total Harvest", subtitle = "by Country", x = "Total Tons", y = "Country")
+```
 
 Add exercise headings as needed.
