@@ -57,4 +57,20 @@ ggplot(data = fisheries,
   labs(title = "Total Harvest", subtitle = "by Country", x = "Total Tons", y = "Country")
 ```
 
-Add exercise headings as needed.
+### Exercise 4
+
+1. This is an observational dataset. Researchers can't randomly assign people to be smokers or not be smokers. 
+
+2. There are 1314 observations, each observation represents 1 participant in the study.
+
+3. There are 3 variables: Outcome (Binomial: dead or alive), Smoker (Binomial: yes or no), and age (continuous).
+```{r outcome_visualization}
+ggplot(data = Whickham,
+       mapping = aes(x = outcome, fill = "red"))+
+  geom_bar()
+```
+
+```{r exercise_4}
+data(Whickham)
+
+```
