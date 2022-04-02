@@ -94,3 +94,17 @@ ggplot(data = Whickham,
        aes(smoker,..count..))+
   geom_bar(aes(fill = outcome), position = "dodge")
 ```
+
+```{r age_var}
+Whickham <- Whickham %>% mutate(age_cat = case_when(age <= 44 ~ "18-44",
+                                        age > 44 & age <= 64 ~ "45-64",
+                                        age > 64 ~ "65+"))
+```
+
+```{r age_facet}
+ggplot(data = Whickham,
+       aes(smoker,..count..))+
+  facet_wrap(~age_cat)+
+  geom_bar(aes(fill = outcome), position = "dodge")
+  
+```
