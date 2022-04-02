@@ -64,13 +64,33 @@ ggplot(data = fisheries,
 2. There are 1314 observations, each observation represents 1 participant in the study.
 
 3. There are 3 variables: Outcome (Binomial: dead or alive), Smoker (Binomial: yes or no), and age (continuous).
+
 ```{r outcome_visualization}
+data("Whickham")
 ggplot(data = Whickham,
-       mapping = aes(x = outcome, fill = "red"))+
+       mapping = aes(x = outcome, fill = outcome))+
   geom_bar()
 ```
+```{r smoker_plot}
+ggplot(data = Whickham,
+       mapping = aes(x = smoker, fill = smoker))+
+  geom_bar()
+```
+```{r age_plot}
+ggplot(data = Whickham,
+       mapping = aes(x = age))+
+  geom_bar()
+```
+4. I would expect more smokers to be dead than non-smokers, but given that most of the participants are still alive, I think the ratio may not show that. However, over time, we may see that more smokers died younger than non-smokers.
 
-```{r exercise_4}
-data(Whickham)
+5.
+```{r whickham_smoker_outcome}
+Whickham %>%
+  count(smoker, outcome)
+```
 
+```{r whickham_visualization}
+ggplot(data = Whickham,
+       aes(smoker,..count..))+
+  geom_bar(aes(fill = outcome), position = "dodge")
 ```
