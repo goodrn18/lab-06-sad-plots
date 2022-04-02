@@ -101,10 +101,15 @@ Whickham <- Whickham %>% mutate(age_cat = case_when(age <= 44 ~ "18-44",
                                         age > 64 ~ "65+"))
 ```
 
+As I predicted, there are more smokers dead in the 45-64 age range than non-smokers.
 ```{r age_facet}
 ggplot(data = Whickham,
        aes(smoker,..count..))+
   facet_wrap(~age_cat)+
   geom_bar(aes(fill = outcome), position = "dodge")
   
+```
+```{r whickham_smoker_outcome}
+Whickham %>%
+  count(smoker, outcome, age_cat)
 ```
